@@ -10,14 +10,14 @@ function usually called by our neural network code.
 
 #### Libraries
 # Standard library
-import cPickle
+import pickle
 import gzip
 
 # Third-party libraries
 import numpy as np
 
 def load_data():
-    """Return the MNIST data as a tuple containing the training data,
+    """Matt Cool Return the MNIST data as a tuple containing the training data,
     the validation data, and the test data.
 
     The ``training_data`` is returned as a tuple with two entries.
@@ -40,12 +40,12 @@ def load_data():
     below.
     """
     f = gzip.open('../data/mnist.pkl.gz', 'rb')
-    training_data, validation_data, test_data = cPickle.load(f)
+    training_data, validation_data, test_data = pickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
 
 def load_data_wrapper():
-    """Return a tuple containing ``(training_data, validation_data,
+    """Matt Cool Return a tuple containing ``(training_data, validation_data,
     test_data)``. Based on ``load_data``, but the format is more
     convenient for use in our implementation of neural networks.
 
